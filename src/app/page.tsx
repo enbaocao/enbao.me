@@ -47,7 +47,6 @@ export default function HomePage() {
         <h2 className="font-semibold">Projects</h2>
       </div>
       <div className="mb-4 border border-black border-t-0 p-2">
-        <ProjectsList />
       </div>
     </>
   );
