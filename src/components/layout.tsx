@@ -8,7 +8,7 @@ interface LayoutProps {
 
 export default function Layout({ children, sidebarContent }: LayoutProps) {
   return (
-    <div className="no-select flex flex-col w-full h-full px-4 md:px-6 lg:px-8 max-w-6xl mx-auto">
+    <div className="no-select flex flex-col w-full h-full px-4 md:px-6 lg:px-8 max-w-screen-2xl mx-auto">
       <Header />
       <div className="flex flex-col md:flex-row flex-grow text-3xs lg:text-2xs gap-4">
         <aside className="w-full md:w-1/3 h-full mb-4 md:mb-0 md:mr-4">
