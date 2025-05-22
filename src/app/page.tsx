@@ -1,8 +1,10 @@
 import Pokemon from '@/components/pokemon';
 import PostsList from '@/components/postslist';
+import ReadingList from '@/components/readinglist';
 import ProjectsList from '@/components/projects';
 import Layout from '@/components/layout';
 import { getRecentPosts } from '@/data/posts';
+import { getRecentReadings } from '@/data/readings';
 
 export default function HomePage() {
   // Define sidebar content
@@ -43,7 +45,13 @@ export default function HomePage() {
         <h2 className="font-semibold">Blog</h2>
       </div>
       <PostsList posts={getRecentPosts()} />  
+      
       <div className="border border-black p-2">
+        <h2 className="font-semibold">Reading</h2>
+      </div>
+      <ReadingList readings={getRecentReadings(3)} />
+      
+      <div className="border border-black p-2 mt-4">
         <h2 className="font-semibold">Projects</h2>
       </div>
       <div className="mb-4 border border-black border-t-0 p-2">
