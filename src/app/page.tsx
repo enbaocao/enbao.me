@@ -51,10 +51,10 @@ export default function HomePage() {
       </div>
       <ReadingList readings={getRecentReadings(3)} />
       
-      <div className="border border-black p-2 mt-4">
+      <div className="border border-black p-2">
         <h2 className="font-semibold">Projects</h2>
       </div>
-      <div className="mb-4 border border-black border-t-0 p-2">
+      <div className="border border-black border-t-0 p-2">
         tbd!
       </div>
     </>

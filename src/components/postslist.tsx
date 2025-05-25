@@ -1,15 +1,9 @@
-// src/components/PostsList.tsx
 import Link from 'next/link';
+import { Post } from '@/data/posts';
 
-type Post = {
-  date: string;
-  title: string;
-  slug: string;
-};
-
-type PostsListProps = {
+interface PostsListProps {
   posts: readonly Post[] | Post[];
-};
+}
 
 export default function PostsList({ posts }: PostsListProps) {
   return (
@@ -19,7 +13,7 @@ export default function PostsList({ posts }: PostsListProps) {
           {posts.map((post) => (
             <li key={post.slug} className="-mx-1 px-1 py-0.2 rounded">
               <Link href={`/posts/${post.slug}`} className="flex flex-row items-baseline group">
-                <span className="text-gray-600 mr-3 text-xs">{post.date}</span>
+                <span className="text-gray-600 mr-3 text-2xs">{post.date}</span>
                 <span className="group-hover:text-green-500 transition-colors duration-200">{post.title}</span>
               </Link>
             </li>

@@ -1,10 +1,14 @@
 // src/data/posts.ts
-export const posts = [
-    { date: '25-03-10', title: 'website update', slug: 'update' },
-    { date: '25-02-09', title: 'the stack', slug: 'intro' },
-    { date: '25-02-10', title: 'learning', slug: 'learning' },
-    // { date: '25-00-00', title: 'three', slug: 'intro' } // Removed
+export interface Post {
+  date: string;
+  title: string;
+  slug: string;
+}
+
+export const posts: Post[] = [
+  { date: '25-02-09', title: 'the stack', slug: 'intro' },
+  { date: '25-02-10', title: 'learning', slug: 'learning' },
 ] as const;
-  
-// if u need just recent posts somewhere
+
+// Get recent posts for display
 export const getRecentPosts = () => posts.slice(0, 3);
